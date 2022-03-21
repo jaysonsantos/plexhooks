@@ -39,6 +39,12 @@ type ExternalGuid struct {
 	Id string
 }
 
+type Rating struct {
+	Image string
+	Value float32
+	Type string
+}
+
 type Metadata struct {
 	LibrarySectionType    string
 	RatingKey             string
@@ -63,7 +69,7 @@ type Metadata struct {
 	Tagline               string
 	Index                 int
 	ParentIndex           int
-	Rating                float32
+	Rating                []Rating
 	RatingCount           int
 	AudienceRating        float32
 	ViewOffset            int
