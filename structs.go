@@ -42,7 +42,7 @@ type ExternalGuid struct {
 type Rating struct {
 	Image string
 	Value float32
-	Type string
+	Type  string
 }
 
 type Metadata struct {
@@ -69,7 +69,8 @@ type Metadata struct {
 	Tagline               string
 	Index                 int
 	ParentIndex           int
-	Rating                []Rating
+	RatingValue           float64  `json:"rating"`
+	Rating                []Rating `json:"Rating"`
 	RatingCount           int
 	AudienceRating        float32
 	ViewOffset            int
